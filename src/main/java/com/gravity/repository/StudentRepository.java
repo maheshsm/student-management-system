@@ -1,5 +1,11 @@
 package com.gravity.repository;
 
-public class StudentRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.gravity.model.Student;
+
+@Repository
+public interface StudentRepository extends JpaRepository<Student, Integer > {
 
 }
