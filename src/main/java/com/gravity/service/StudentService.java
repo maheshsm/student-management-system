@@ -36,4 +36,9 @@ public class StudentService implements StudentServiceI {
 		}
 		return "Student having roll no. " + rollNo + " not found";
 	}
+
+	@Override
+	public Student createStudentRecord(Student student) {
+		return studentRepostory.save(student);
+	}
 }
