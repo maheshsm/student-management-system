@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.gravity.model.Student;
 
 @Repository
-public interface StudentRepository extends JpaRepository<Student, Integer > {
+public interface StudentRepository extends JpaRepository<Student, Integer> {
+	
+	Student findByRollNo(Integer rollNo);
 
 }

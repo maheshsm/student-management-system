@@ -11,15 +11,10 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer rollNo;
-	
 	private String firstName;
-	
 	private String lastName;
-	
 	private Double marks;
-	
 	private String email;
-	
 	private Long mobileNo;
 
 	public Integer getRollNo() {
