@@ -41,4 +41,5 @@ public class StudentService implements StudentServiceI {
 	public Student createStudentRecord(Student student) {
 		return studentRepostory.save(student);
 	}
+
 }

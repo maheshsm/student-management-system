@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,4 +44,10 @@ public class StudentController {
 		return new ResponseEntity<>(studentService.deleteStudentByRollNo(rollNo), HttpStatus.NO_CONTENT);
 		
 	}
+	
+	@PostMapping("/add")
+	public ResponseEntity<Student> addStudent(@RequestBody Student student){
+		return new ResponseEntity<Student>(studentService.createStudentRecord(student),HttpStatus.CREATED);
+	}
+
 }

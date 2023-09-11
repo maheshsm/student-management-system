@@ -9,4 +9,5 @@ public interface StudentServiceI {
 	String deleteStudentByRollNo(Integer rollNo);
 
 	Student createStudentRecord(Student student);
+
 }
