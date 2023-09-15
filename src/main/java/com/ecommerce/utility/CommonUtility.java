@@ -1,4 +1,4 @@
-package com.gravity.utility;
+package com.ecommerce.utility;
 
 public class CommonUtility {
 
