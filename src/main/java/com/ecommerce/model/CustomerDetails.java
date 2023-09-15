@@ -10,7 +10,7 @@ public class CustomerDetails {
 	private long mobile;
 	private String email;
 	private String address;
-
+	private int billId;
 
 	public CustomerDetails() {
 		super();
@@ -18,7 +18,7 @@ public class CustomerDetails {
 	}
 
 	public CustomerDetails(int customerId, String firstName, String lastName, String username, String password,
-			long mobile, String email, String address) {
+			long mobile, String email, String address, int billId) {
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
@@ -28,7 +28,7 @@ public class CustomerDetails {
 		this.mobile = mobile;
 		this.email = email;
 		this.address = address;
-		
+		this.billId = billId;
 	}
 
 	public int getCustomerId() {
@@ -95,6 +95,12 @@ public class CustomerDetails {
 		this.address = address;
 	}
 
+	public int getBillId() {
+		return billId;
+	}
 
+	public void setBillId(int billId) {
+		this.billId = billId;
+	}
 
 }

@@ -25,6 +25,5 @@ public class EmployeeDetailsController {
 	// Put 
 	@PutMapping("/student/{rollNumber}")
 	public void updateStudentById(@PathVariable (value="rollNumber") Integer rollNumber) {
-			
 	}
 }

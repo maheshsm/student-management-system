@@ -1,6 +1,9 @@
 package com.ecommerce.repository;
 
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -13,6 +16,7 @@ public class CustomerDetailsRepository {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
+	// save
 	public int save(CustomerDetails customerDetails) {
 		
 		int insertedRow = jdbcTemplate.update("insert into customer_details"
@@ -25,7 +29,61 @@ public class CustomerDetailsRepository {
 				customerDetails.getMobile(),
 				customerDetails.getEmail(),
 				customerDetails.getAddress());
+		
 		return insertedRow;
 	}
+	
+	
+	
+	// findAll
+	 public List<CustomerDetails> findAll(){
+		
+		return  jdbcTemplate.query(
+				"select * from customer_details", 
+				(rs , rowNum) -> 
+						
+						new CustomerDetails(
+						
+								rs.getInt("customerId"),
+								rs.getString("firstName"),
+								rs.getString("lastName"),
+								rs.getString("username"),
+								rs.getString("password"),
+								rs.getLong("mobile"),
+								rs.getString("email"),
+								rs.getString("address"),
+								rs.getInt("billId")
+								
+						)
+				
+				);
+		 
+		
+
+	 }
+	 
+	 //update
+	 public int update(CustomerDetails customerDetails) {
+		   return jdbcTemplate.update(
+	                "update customer_details set firstName = ? , lastName = ? , "
+	                + " email = ?, mobile = ?, address = ?  where customerId = ?",
+	              
+	                customerDetails.getFirstName(),
+	                customerDetails.getLastName(),
+	                customerDetails.getEmail(),
+	                customerDetails.getMobile(),
+	                customerDetails.getAddress(),
+	                customerDetails.getCustomerId()
+	                ); 
+		
+	 }
+	 
+	 
+	 
+	 // deleteById
+	  public int deleteById(int customerId) {
+		  return jdbcTemplate.update("delete customer_details where customerId = ? ", customerId );
+	  }
+	 
 	
 }

@@ -25,26 +25,22 @@ public class CustomerDetailsServiceImpl implements CustomerDetailServiceIn {
 
 	@Override
 	public CustomerDetails getCustomerDetails(int customerId) {
-		// TODO Auto-generated method stub
-		return null;
+		return customerDetailsRepository.findById(customerId);
 	}
 
 	@Override
 	public List<CustomerDetails> getAllCustomerRecord() {
-		// TODO Auto-generated method stub
-		return null;
+		return customerDetailsRepository.findAll();
 	}
 
 	@Override
-	public CustomerDetails updateCustomerDetails(int customerId) {
-		// TODO Auto-generated method stub
-		return null;
+	public int updateCustomerDetails(CustomerDetails customerDetails) {
+		return customerDetailsRepository.update(customerDetails);
 	}
 
 	@Override
-	public CustomerDetails deleteCustomerDetails(int customerId) {
-		// TODO Auto-generated method stub
-		return null;
+	public void deleteCustomerDetails(int customerId) {
+		customerDetailsRepository.deleteById(customerId);;
 	}
 	
 	

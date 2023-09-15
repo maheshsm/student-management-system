@@ -11,7 +11,7 @@ public interface CustomerDetailServiceIn {
     CustomerDetails getCustomerDetails(int customerId);
     List<CustomerDetails> getAllCustomerRecord();
 	// update
-    CustomerDetails updateCustomerDetails(int customerId);
+    int updateCustomerDetails(CustomerDetails customerDetails);
 	// delete
-    CustomerDetails deleteCustomerDetails(int customerId);
+    void deleteCustomerDetails(int customerId);
 }
