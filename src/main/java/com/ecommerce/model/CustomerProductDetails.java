@@ -13,7 +13,7 @@ public class CustomerProductDetails {
 	private int productOriginalAmount;
 	private int stateGstPercentage;
 	private int centerGstPercentage;
-	private int productFinalAmount;
+	private double productFinalAmount;
 
 	public CustomerProductDetails() {
 		super();
@@ -22,7 +22,7 @@ public class CustomerProductDetails {
 
 	public CustomerProductDetails(int custProdId, int customerId, int productId, int discountId, int purchaseInKgs,
 			int purchaseInLtrs, int purchaseInCount, int discountedAmount, int productOriginalAmount,
-			int stateGstPercentage, int centerGstPercentage, int productFinalAmount) {
+			int stateGstPercentage, int centerGstPercentage, double productFinalAmount) {
 		super();
 		this.custProdId = custProdId;
 		this.customerId = customerId;
@@ -126,13 +126,13 @@ public class CustomerProductDetails {
 		this.centerGstPercentage = centerGstPercentage;
 	}
 
-	public int getProductFinalAmount() {
+	public double getProductFinalAmount() {
 		return productFinalAmount;
 	}
 
-	public void setProductFinalAmount(int productFinalAmount) {
+	public void setProductFinalAmount(double productFinalAmount) {
 		this.productFinalAmount = productFinalAmount;
 	}
 
-	// Constructors, getters, setters, and other methods as needed
+	
 }

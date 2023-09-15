@@ -6,14 +6,14 @@ public class BillDetails {
 	private int billId;
 	private int customerId;
 	private Date billDate;
-	private int totalAmount;
+	private double totalAmount;
 
 	public BillDetails() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public BillDetails(int billId, int customerId, Date billDate, int totalAmount) {
+	public BillDetails(int billId, int customerId, Date billDate, double totalAmount) {
 		super();
 		this.billId = billId;
 		this.customerId = customerId;
@@ -45,11 +45,11 @@ public class BillDetails {
 		this.billDate = billDate;
 	}
 
-	public int getTotalAmount() {
+	public double getTotalAmount() {
 		return totalAmount;
 	}
 
-	public void setTotalAmount(int totalAmount) {
+	public void setTotalAmount(double totalAmount) {
 		this.totalAmount = totalAmount;
 	}
 

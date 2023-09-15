@@ -2,11 +2,12 @@ package com.ecommerce.model;
 
 public class EmployeeDetails {
 
-	private Integer userId;
+	private int userId;
 	private String firstName;
 	private String lastName;
 	private String userName;
-	private Long mobile;
+	private String password;
+	private long mobile;
 	private String email;
 	private String address;
 	private int roleId;
@@ -16,24 +17,25 @@ public class EmployeeDetails {
 		// TODO Auto-generated constructor stub
 	}
 
-	public EmployeeDetails(Integer userId, String firstName, String lastName, String userName, Long mobile,
+	public EmployeeDetails(int userId, String firstName, String lastName, String userName, String password, long mobile,
 			String email, String address, int roleId) {
 		super();
 		this.userId = userId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.userName = userName;
+		this.password = password;
 		this.mobile = mobile;
 		this.email = email;
 		this.address = address;
 		this.roleId = roleId;
 	}
 
-	public Integer getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
@@ -61,11 +63,19 @@ public class EmployeeDetails {
 		this.userName = userName;
 	}
 
-	public Long getMobile() {
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public long getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(Long mobile) {
+	public void setMobile(long mobile) {
 		this.mobile = mobile;
 	}
 
@@ -93,5 +103,5 @@ public class EmployeeDetails {
 		this.roleId = roleId;
 	}
 
-	// Constructors, getters, setters, and other methods as needed
+	
 }
