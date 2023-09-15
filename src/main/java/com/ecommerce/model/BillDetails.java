@@ -6,5 +6,5 @@ public class BillDetails {
 	private int billId;
 	private int customerId;
 	private Date billDate;
-	private String totalAmountprivate;
+	private int  totalAmount;
 }
