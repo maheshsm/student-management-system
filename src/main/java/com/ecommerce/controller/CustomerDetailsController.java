@@ -34,7 +34,7 @@ public class CustomerDetailsController {
 	
 	//retrieve details
 	@GetMapping("/customer/{customerId}")
-	public ResponseEntity<CustomerDetails> getRecordCustomerDetails(@PathVariable int customerId){
+	public ResponseEntity<List<CustomerDetails>> getRecordCustomerDetails(@PathVariable int customerId){
 		try {
 			return new ResponseEntity<>(customerDetailService.getCustomerDetails(customerId), HttpStatus.OK);
 		} catch (Exception e) {

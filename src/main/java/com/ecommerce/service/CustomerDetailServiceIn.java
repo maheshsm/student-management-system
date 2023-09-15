@@ -8,7 +8,7 @@ public interface CustomerDetailServiceIn {
 	// add
     int registerCustomer(CustomerDetails cutomerDeatails);
 	// get
-    CustomerDetails getCustomerDetails(int customerId);
+    List<CustomerDetails> getCustomerDetails(int customerId);
     List<CustomerDetails> getAllCustomerRecord();
 	// update
     int updateCustomerDetails(CustomerDetails customerDetails);

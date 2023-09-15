@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.ecommerce.model.CustomerDetails;
 
 @Repository
-public class CustomerDetailsRepository {
+public class CustomerDetailsRepository{
    
 	@Autowired
 	JdbcTemplate jdbcTemplate;
@@ -33,6 +33,34 @@ public class CustomerDetailsRepository {
 		return insertedRow;
 	}
 	
+	@SuppressWarnings("deprecation")
+	public List<CustomerDetails> findById(int customerId) {
+		
+		
+		     return jdbcTemplate.query(
+				"select * from customer_details where customerId = ?",
+				new Object[] { customerId },
+				(rs ,rowNum) -> 
+						
+						new CustomerDetails(
+						
+								rs.getInt("customerId"),
+								rs.getString("firstName"),
+								rs.getString("lastName"),
+								rs.getString("username"),
+								rs.getString("password"),
+								rs.getLong("mobile"),
+								rs.getString("email"),
+								rs.getString("address"),
+								rs.getInt("billId")
+								
+						)
+				
+				);
+		    
+		    
+
+	}
 	
 	
 	// findAll

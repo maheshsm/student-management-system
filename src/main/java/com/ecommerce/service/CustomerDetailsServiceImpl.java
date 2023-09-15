@@ -24,7 +24,7 @@ public class CustomerDetailsServiceImpl implements CustomerDetailServiceIn {
 	}
 
 	@Override
-	public CustomerDetails getCustomerDetails(int customerId) {
+	public List<CustomerDetails> getCustomerDetails(int customerId) {
 		return customerDetailsRepository.findById(customerId);
 	}
 
