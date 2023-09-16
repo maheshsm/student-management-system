@@ -41,9 +41,7 @@ public class CustomerDetailsServiceImpl implements CustomerDetailServiceIn {
 	}
 
 	@Override
-	public void deleteCustomerDetails(int customerId) throws SQLException {
-		customerDetailsRepository.deleteById(customerId);;
+	public void deleteCustomerDetails(int customerId){
+			customerDetailsRepository.deleteById(customerId);
 	}
-	
-	
 }

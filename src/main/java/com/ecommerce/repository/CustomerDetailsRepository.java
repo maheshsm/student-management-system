@@ -28,10 +28,10 @@ public class CustomerDetailsRepository {
 
 	}
 
-   // findById query 	
+	// findById query
 	public customerDetailsDTO findById(int customerId) {
 		String findByIdQuery = "select * from customer_details where customerId = ?";
-		
+
 		RowMapper<customerDetailsDTO> rowMapper = new RowMapper<customerDetailsDTO>() {
 
 			@Override
@@ -42,12 +42,12 @@ public class CustomerDetailsRepository {
 				customerDetails.setLastName(rs.getString(3));
 				customerDetails.setMobile(rs.getLong(6));
 				customerDetails.setEmail(rs.getString(7));
-				customerDetails.setAddress(rs.getString(customerId));
-				
+				customerDetails.setAddress(rs.getString(8));
+
 				return customerDetails;
 			}
 		};
-	    customerDetailsDTO  customerDetails =  jdbcTemplate.queryForObject(findByIdQuery, rowMapper, customerId );
+		customerDetailsDTO customerDetails = jdbcTemplate.queryForObject(findByIdQuery, rowMapper, customerId);
 		return customerDetails;
 	}
 
@@ -84,9 +84,9 @@ public class CustomerDetailsRepository {
 	}
 
 	// deleteById
-	public int deleteById(int customerId) throws SQLException {
-		String deleteQuery = "delete customer_details where customerId = ? ";
-		return jdbcTemplate.update(deleteQuery, customerId);
+	public void deleteById(int customerId){
+		String deleteQuery = "delete from customer_details where customerId = ? ";
+        jdbcTemplate.update(deleteQuery, customerId);
 	}
 
 }

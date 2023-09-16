@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.dto.customerDetailsDTO;
+import com.ecommerce.exception.ResourceNotFoundException;
 import com.ecommerce.model.CustomerDetails;
 import com.ecommerce.service.CustomerDetailServiceIn;
 
@@ -34,30 +35,17 @@ public class CustomerDetailsController {
 		return new ResponseEntity<>(customerDetailService.registerCustomer(customerDetails), HttpStatus.CREATED);
 	}
 	
-	//retrieve details
+	//retrieve details by id
 	@GetMapping("/customer/{customerId}")
 	public ResponseEntity<customerDetailsDTO> getRecordCustomerDetails(@PathVariable int customerId){
-		try {
-			return new ResponseEntity<>(customerDetailService.findByCustomerDetails(customerId), HttpStatus.OK);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return new ResponseEntity<>(customerDetailService.findByCustomerDetails(customerId), HttpStatus.NOT_FOUND);
-		}
-		
-		
+			return new ResponseEntity<>(customerDetailService.findByCustomerDetails(customerId), HttpStatus.OK);	
 		
 	}
 	
+	//retrieve all details
 	@GetMapping("/customer")
 	public  ResponseEntity<List<customerDetailsDTO>> getAllCustomerRecord() {
-		
-		try {
 			return new ResponseEntity<>(customerDetailService.findAllCustomerRecord(), HttpStatus.OK);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return new ResponseEntity<>(customerDetailService.findAllCustomerRecord(), HttpStatus.NOT_FOUND);
-		}
-		
 	}
 	
 	

@@ -15,5 +15,5 @@ public interface CustomerDetailServiceIn {
 	// update
     int updateCustomerDetails(CustomerDetails customerDetails);
 	// delete
-    void deleteCustomerDetails(int customerId) throws SQLException;
+    void deleteCustomerDetails(int customerId);
 }
