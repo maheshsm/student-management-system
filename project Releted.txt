@@ -18,6 +18,8 @@ roleId
 customerId,
 firstName
 lastName
+username
+password
 mobile
 email
 address
