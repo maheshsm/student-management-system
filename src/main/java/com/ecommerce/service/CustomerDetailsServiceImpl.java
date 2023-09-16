@@ -1,11 +1,13 @@
 package com.ecommerce.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import com.ecommerce.dto.customerDetailsDTO;
 import com.ecommerce.model.CustomerDetails;
 import com.ecommerce.repository.CustomerDetailsRepository;
 
@@ -24,12 +26,12 @@ public class CustomerDetailsServiceImpl implements CustomerDetailServiceIn {
 	}
 
 	@Override
-	public List<CustomerDetails> getCustomerDetails(int customerId) {
+	public customerDetailsDTO findByCustomerDetails(int customerId) {
 		return customerDetailsRepository.findById(customerId);
 	}
 
 	@Override
-	public List<CustomerDetails> getAllCustomerRecord() {
+	public List<customerDetailsDTO> findAllCustomerRecord() {
 		return customerDetailsRepository.findAll();
 	}
 
@@ -39,7 +41,7 @@ public class CustomerDetailsServiceImpl implements CustomerDetailServiceIn {
 	}
 
 	@Override
-	public void deleteCustomerDetails(int customerId) {
+	public void deleteCustomerDetails(int customerId) throws SQLException {
 		customerDetailsRepository.deleteById(customerId);;
 	}
 	

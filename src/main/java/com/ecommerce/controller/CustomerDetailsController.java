@@ -1,5 +1,6 @@
 package com.ecommerce.controller;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecommerce.dto.customerDetailsDTO;
 import com.ecommerce.model.CustomerDetails;
 import com.ecommerce.service.CustomerDetailServiceIn;
 
@@ -34,12 +36,12 @@ public class CustomerDetailsController {
 	
 	//retrieve details
 	@GetMapping("/customer/{customerId}")
-	public ResponseEntity<List<CustomerDetails>> getRecordCustomerDetails(@PathVariable int customerId){
+	public ResponseEntity<customerDetailsDTO> getRecordCustomerDetails(@PathVariable int customerId){
 		try {
-			return new ResponseEntity<>(customerDetailService.getCustomerDetails(customerId), HttpStatus.OK);
+			return new ResponseEntity<>(customerDetailService.findByCustomerDetails(customerId), HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ResponseEntity<>(customerDetailService.getCustomerDetails(customerId), HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(customerDetailService.findByCustomerDetails(customerId), HttpStatus.NOT_FOUND);
 		}
 		
 		
@@ -47,13 +49,13 @@ public class CustomerDetailsController {
 	}
 	
 	@GetMapping("/customer")
-	public  ResponseEntity<List<CustomerDetails>> getAllCustomerRecord() {
+	public  ResponseEntity<List<customerDetailsDTO>> getAllCustomerRecord() {
 		
 		try {
-			return new ResponseEntity<>(customerDetailService.getAllCustomerRecord(), HttpStatus.OK);
+			return new ResponseEntity<>(customerDetailService.findAllCustomerRecord(), HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ResponseEntity<>(customerDetailService.getAllCustomerRecord(), HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(customerDetailService.findAllCustomerRecord(), HttpStatus.NOT_FOUND);
 		}
 		
 	}
@@ -73,7 +75,7 @@ public class CustomerDetailsController {
 	
 	//delete
 	@DeleteMapping("/customer/{customerId}")
-	public ResponseEntity<?> deleteCustomerDetails(@PathVariable int customerId ){
+	public ResponseEntity<?> deleteCustomerDetails(@PathVariable int customerId ) throws SQLException{
 		 customerDetailService.deleteCustomerDetails(customerId);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}

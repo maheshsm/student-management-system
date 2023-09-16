@@ -1,13 +1,15 @@
 package com.ecommerce.repository;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.ecommerce.dto.customerDetailsDTO;
 import com.ecommerce.model.CustomerDetails;
 
 @Repository
@@ -26,24 +28,49 @@ public class CustomerDetailsRepository {
 
 	}
 
-	@SuppressWarnings("deprecation")
-	public List<CustomerDetails> findById(int customerId) {
+   // findById query 	
+	public customerDetailsDTO findById(int customerId) {
 		String findByIdQuery = "select * from customer_details where customerId = ?";
-		return jdbcTemplate.query(findByIdQuery, new Object[] { customerId },
-				(rs, rowNum) -> new CustomerDetails(rs.getInt("customerId"), rs.getString("firstName"),
-						rs.getString("lastName"), rs.getString("username"), rs.getString("password"),
-						rs.getLong("mobile"), rs.getString("email"), rs.getString("address"), rs.getInt("billId")));
+		
+		RowMapper<customerDetailsDTO> rowMapper = new RowMapper<customerDetailsDTO>() {
 
+			@Override
+			public customerDetailsDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+				customerDetailsDTO customerDetails = new customerDetailsDTO();
+				customerDetails.setCustomerId(rs.getInt(1));
+				customerDetails.setFirstName(rs.getString(2));
+				customerDetails.setLastName(rs.getString(3));
+				customerDetails.setMobile(rs.getLong(6));
+				customerDetails.setEmail(rs.getString(7));
+				customerDetails.setAddress(rs.getString(customerId));
+				
+				return customerDetails;
+			}
+		};
+	    customerDetailsDTO  customerDetails =  jdbcTemplate.queryForObject(findByIdQuery, rowMapper, customerId );
+		return customerDetails;
 	}
 
 	// findAll
-	public List<CustomerDetails> findAll() {
+	public List<customerDetailsDTO> findAll() {
 		String findListQuery = "select * from customer_details";
-		return jdbcTemplate.query(findListQuery,
-				(rs, rowNum) -> new CustomerDetails(rs.getInt("customerId"), rs.getString("firstName"),
-						rs.getString("lastName"), rs.getString("username"), rs.getString("password"),
-						rs.getLong("mobile"), rs.getString("email"), rs.getString("address"), rs.getInt("billId")));
+		RowMapper<customerDetailsDTO> rowMapper = new RowMapper<customerDetailsDTO>() {
 
+			@Override
+			public customerDetailsDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+				customerDetailsDTO customerDetails = new customerDetailsDTO();
+				customerDetails.setCustomerId(rs.getInt(1));
+				customerDetails.setFirstName(rs.getString(2));
+				customerDetails.setLastName(rs.getString(3));
+				customerDetails.setMobile(rs.getLong(6));
+				customerDetails.setEmail(rs.getString(7));
+				customerDetails.setAddress(rs.getString(8));
+				return customerDetails;
+			}
+		};
+
+		List<customerDetailsDTO> list = jdbcTemplate.query(findListQuery, rowMapper);
+		return list;
 	}
 
 	// update
