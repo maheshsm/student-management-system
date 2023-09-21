@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import com.ecommerce.dto.customerDetailsDTO;
+import com.ecommerce.dto.CustomerDetailsDTO;
 import com.ecommerce.model.CustomerDetails;
 import com.ecommerce.repository.CustomerDetailsRepository;
 
@@ -20,18 +20,18 @@ public class CustomerDetailsServiceImpl implements CustomerDetailServiceIn {
 	CustomerDetailsRepository customerDetailsRepository;
 	
 	@Override
-	public int registerCustomer(CustomerDetails cutomerDeatails) {
-		int save = customerDetailsRepository.save(cutomerDeatails);
-		return save;
+	public Integer registerCustomer(CustomerDetails cutomerDeatails) {
+		
+		return customerDetailsRepository.registerNewCustomer(cutomerDeatails);
 	}
 
 	@Override
-	public customerDetailsDTO findByCustomerDetails(int customerId) {
+	public CustomerDetailsDTO findByCustomerDetails(int customerId) {
 		return customerDetailsRepository.findById(customerId);
 	}
 
 	@Override
-	public List<customerDetailsDTO> findAllCustomerRecord() {
+	public List<CustomerDetailsDTO> findAllCustomerRecord() {
 		return customerDetailsRepository.findAll();
 	}
 

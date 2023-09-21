@@ -1,6 +1,6 @@
 package com.ecommerce.dto;
 
-public class customerDetailsDTO {
+public class CustomerDetailsDTO {
 	
 	private int customerId;
 	private String firstName;
@@ -10,12 +10,12 @@ public class customerDetailsDTO {
 	private String address;
 	private int billId;
 	
-	public customerDetailsDTO() {
+	public CustomerDetailsDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public customerDetailsDTO(int customerId, String firstName, String lastName, long mobile, String email,
+	public CustomerDetailsDTO(int customerId, String firstName, String lastName, long mobile, String email,
 			String address, int billId) {
 		super();
 		this.customerId = customerId;

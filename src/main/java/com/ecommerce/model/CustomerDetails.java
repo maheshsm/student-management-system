@@ -2,40 +2,21 @@ package com.ecommerce.model;
 
 public class CustomerDetails {
 
-	private int customerId;
+	private Integer customerId;
 	private String firstName;
 	private String lastName;
 	private String username;
 	private String password;
-	private long mobile;
+	private Long mobile;
 	private String email;
 	private String address;
-	private int billId;
+	private Integer billId;
 
-	public CustomerDetails() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public CustomerDetails(int customerId, String firstName, String lastName, String username, String password,
-			long mobile, String email, String address, int billId) {
-		super();
-		this.customerId = customerId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.username = username;
-		this.password = password;
-		this.mobile = mobile;
-		this.email = email;
-		this.address = address;
-		this.billId = billId;
-	}
-
-	public int getCustomerId() {
+	public Integer getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(Integer customerId) {
 		this.customerId = customerId;
 	}
 
@@ -71,11 +52,11 @@ public class CustomerDetails {
 		this.password = password;
 	}
 
-	public long getMobile() {
+	public Long getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(long mobile) {
+	public void setMobile(Long mobile) {
 		this.mobile = mobile;
 	}
 
@@ -95,12 +76,18 @@ public class CustomerDetails {
 		this.address = address;
 	}
 
-	public int getBillId() {
+	public Integer getBillId() {
 		return billId;
 	}
 
-	public void setBillId(int billId) {
+	public void setBillId(Integer billId) {
 		this.billId = billId;
 	}
 
+	@Override
+	public String toString() {
+		return "CustomerDetails [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", username=" + username + ", password=" + password + ", mobile=" + mobile + ", email=" + email
+				+ ", address=" + address + ", billId=" + billId + "]";
+	}
 }

@@ -1,19 +1,30 @@
 package com.ecommerce.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
-import com.ecommerce.dto.customerDetailsDTO;
+import com.ecommerce.dto.CustomerDetailsDTO;
 import com.ecommerce.model.CustomerDetails;
 
+/**
+ * This is specification class for customer activities.
+ */
 public interface CustomerDetailServiceIn {
-	// add
-    int registerCustomer(CustomerDetails cutomerDeatails);
+	
+	/**
+	 * 
+	 * @param cutomerDeatails
+	 * @return Integer
+	 */
+	Integer registerCustomer(CustomerDetails cutomerDeatails);
+
 	// get
-    customerDetailsDTO findByCustomerDetails(int customerId);
-    List<customerDetailsDTO> findAllCustomerRecord();
+	CustomerDetailsDTO findByCustomerDetails(int customerId);
+
+	List<CustomerDetailsDTO> findAllCustomerRecord();
+
 	// update
-    int updateCustomerDetails(CustomerDetails customerDetails);
+	int updateCustomerDetails(CustomerDetails customerDetails);
+
 	// delete
-    void deleteCustomerDetails(int customerId);
+	void deleteCustomerDetails(int customerId);
 }
