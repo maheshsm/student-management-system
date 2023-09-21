@@ -1,10 +1,8 @@
 package com.ecommerce.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.dto.customerDetailsDTO;
@@ -20,13 +18,13 @@ public class CustomerDetailsServiceImpl implements CustomerDetailServiceIn {
 	CustomerDetailsRepository customerDetailsRepository;
 	
 	@Override
-	public int registerCustomer(CustomerDetails cutomerDeatails) {
-		int save = customerDetailsRepository.save(cutomerDeatails);
+	public Integer registerCustomer(CustomerDetails cutomerDeatails) {
+		Integer save = customerDetailsRepository.registeCustomer(cutomerDeatails);
 		return save;
 	}
 
 	@Override
-	public customerDetailsDTO findByCustomerDetails(int customerId) {
+	public customerDetailsDTO findByCustomerDetails(Long customerId) {
 		return customerDetailsRepository.findById(customerId);
 	}
 
@@ -36,12 +34,12 @@ public class CustomerDetailsServiceImpl implements CustomerDetailServiceIn {
 	}
 
 	@Override
-	public int updateCustomerDetails(CustomerDetails customerDetails) {
-		return customerDetailsRepository.update(customerDetails);
+	public Integer updateCustomerDetails(CustomerDetails customerDetails , Long customerId) {
+		return customerDetailsRepository.update(customerDetails, customerId);
 	}
 
 	@Override
-	public void deleteCustomerDetails(int customerId){
+	public void deleteCustomerDetails(Long customerId){
 			customerDetailsRepository.deleteById(customerId);
 	}
 }

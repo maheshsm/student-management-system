@@ -1,25 +1,14 @@
 package com.ecommerce.model;
 
 public class PaidCategory {
-	private int paidCategoryId;
+	private Integer paidCategoryId;
 	private String name;
 
-	public PaidCategory() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public PaidCategory(int paidCategoryId, String name) {
-		super();
-		this.paidCategoryId = paidCategoryId;
-		this.name = name;
-	}
-
-	public int getPaidCategoryId() {
+	public Integer getPaidCategoryId() {
 		return paidCategoryId;
 	}
 
-	public void setPaidCategoryId(int paidCategoryId) {
+	public void setPaidCategoryId(Integer paidCategoryId) {
 		this.paidCategoryId = paidCategoryId;
 	}
 

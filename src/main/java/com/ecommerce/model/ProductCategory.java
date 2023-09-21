@@ -1,25 +1,14 @@
 package com.ecommerce.model;
 
 public class ProductCategory { // Capitalized class name
-	private int categoryId;
+	private Integer categoryId;
 	private String name;
 
-	public ProductCategory() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public ProductCategory(int categoryId, String name) {
-		super();
-		this.categoryId = categoryId;
-		this.name = name;
-	}
-
-	public int getCategoryId() {
+	public Integer getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(int categoryId) {
+	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
 

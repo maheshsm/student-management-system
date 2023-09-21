@@ -4,12 +4,12 @@ import java.sql.Date;
 
 public class ProductDetails {
 
-	private int productId;
+	private Integer productId;
 	private String name;
-	private int categoryId;
+	private Integer categoryId;
 	private double stockInKgs;
 	private double stockInLtrs;
-	private int stockInCount;
+	private Integer stockInCount;
 	private String description;
 	private String companyName;
 	private Date expiryDate;
@@ -17,34 +17,11 @@ public class ProductDetails {
 	private Date guaranteeDate;
 	private double price;
 
-	public ProductDetails() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public ProductDetails(int productId, String name, int categoryId, double stockInKgs, double stockInLtrs,
-			int stockInCount, String description, String companyName, Date expiryDate, Date warrantyDate,
-			Date guaranteeDate, double price) {
-		super();
-		this.productId = productId;
-		this.name = name;
-		this.categoryId = categoryId;
-		this.stockInKgs = stockInKgs;
-		this.stockInLtrs = stockInLtrs;
-		this.stockInCount = stockInCount;
-		this.description = description;
-		this.companyName = companyName;
-		this.expiryDate = expiryDate;
-		this.warrantyDate = warrantyDate;
-		this.guaranteeDate = guaranteeDate;
-		this.price = price;
-	}
-
-	public int getProductId() {
+	public Integer getProductId() {
 		return productId;
 	}
 
-	public void setProductId(int productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
@@ -56,11 +33,11 @@ public class ProductDetails {
 		this.name = name;
 	}
 
-	public int getCategoryId() {
+	public Integer getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(int categoryId) {
+	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
 
@@ -80,11 +57,11 @@ public class ProductDetails {
 		this.stockInLtrs = stockInLtrs;
 	}
 
-	public int getStockInCount() {
+	public Integer getStockInCount() {
 		return stockInCount;
 	}
 
-	public void setStockInCount(int stockInCount) {
+	public void setStockInCount(Integer stockInCount) {
 		this.stockInCount = stockInCount;
 	}
 

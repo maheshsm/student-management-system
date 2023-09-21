@@ -2,127 +2,104 @@ package com.ecommerce.model;
 
 public class CustomerProductDetails {
 
-	private int custProdId;
-	private int customerId;
-	private int productId;
-	private int discountId;
-	private int purchaseInKgs;
-	private int purchaseInLtrs;
-	private int purchaseInCount;
-	private int discountedAmount;
-	private int productOriginalAmount;
-	private int stateGstPercentage;
-	private int centerGstPercentage;
-	private double productFinalAmount;
+	private Integer custProdId;
+	private Integer customerId;
+	private Integer productId;
+	private Integer discountId;
+	private Integer purchaseInKgs;
+	private Integer purchaseInLtrs;
+	private Integer purchaseInCount;
+	private Integer discountedAmount;
+	private Integer productOriginalAmount;
+	private Integer stateGstPercentage;
+	private Integer centerGstPercentage;
+	private Double productFinalAmount;
 
-	public CustomerProductDetails() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public CustomerProductDetails(int custProdId, int customerId, int productId, int discountId, int purchaseInKgs,
-			int purchaseInLtrs, int purchaseInCount, int discountedAmount, int productOriginalAmount,
-			int stateGstPercentage, int centerGstPercentage, double productFinalAmount) {
-		super();
-		this.custProdId = custProdId;
-		this.customerId = customerId;
-		this.productId = productId;
-		this.discountId = discountId;
-		this.purchaseInKgs = purchaseInKgs;
-		this.purchaseInLtrs = purchaseInLtrs;
-		this.purchaseInCount = purchaseInCount;
-		this.discountedAmount = discountedAmount;
-		this.productOriginalAmount = productOriginalAmount;
-		this.stateGstPercentage = stateGstPercentage;
-		this.centerGstPercentage = centerGstPercentage;
-		this.productFinalAmount = productFinalAmount;
-	}
-
-	public int getCustProdId() {
+	public Integer getCustProdId() {
 		return custProdId;
 	}
 
-	public void setCustProdId(int custProdId) {
+	public void setCustProdId(Integer custProdId) {
 		this.custProdId = custProdId;
 	}
 
-	public int getCustomerId() {
+	public Integer getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(Integer customerId) {
 		this.customerId = customerId;
 	}
 
-	public int getProductId() {
+	public Integer getProductId() {
 		return productId;
 	}
 
-	public void setProductId(int productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
-	public int getDiscountId() {
+	public Integer getDiscountId() {
 		return discountId;
 	}
 
-	public void setDiscountId(int discountId) {
+	public void setDiscountId(Integer discountId) {
 		this.discountId = discountId;
 	}
 
-	public int getPurchaseInKgs() {
+	public Integer getPurchaseInKgs() {
 		return purchaseInKgs;
 	}
 
-	public void setPurchaseInKgs(int purchaseInKgs) {
+	public void setPurchaseInKgs(Integer purchaseInKgs) {
 		this.purchaseInKgs = purchaseInKgs;
 	}
 
-	public int getPurchaseInLtrs() {
+	public Integer getPurchaseInLtrs() {
 		return purchaseInLtrs;
 	}
 
-	public void setPurchaseInLtrs(int purchaseInLtrs) {
+	public void setPurchaseInLtrs(Integer purchaseInLtrs) {
 		this.purchaseInLtrs = purchaseInLtrs;
 	}
 
-	public int getPurchaseInCount() {
+	public Integer getPurchaseInCount() {
 		return purchaseInCount;
 	}
 
-	public void setPurchaseInCount(int purchaseInCount) {
+	public void setPurchaseInCount(Integer purchaseInCount) {
 		this.purchaseInCount = purchaseInCount;
 	}
 
-	public int getDiscountedAmount() {
+	public Integer getDiscountedAmount() {
 		return discountedAmount;
 	}
 
-	public void setDiscountedAmount(int discountedAmount) {
+	public void setDiscountedAmount(Integer discountedAmount) {
 		this.discountedAmount = discountedAmount;
 	}
 
-	public int getProductOriginalAmount() {
+	public Integer getProductOriginalAmount() {
 		return productOriginalAmount;
 	}
 
-	public void setProductOriginalAmount(int productOriginalAmount) {
+	public void setProductOriginalAmount(Integer productOriginalAmount) {
 		this.productOriginalAmount = productOriginalAmount;
 	}
 
-	public int getStateGstPercentage() {
+	public Integer getStateGstPercentage() {
 		return stateGstPercentage;
 	}
 
-	public void setStateGstPercentage(int stateGstPercentage) {
+	public void setStateGstPercentage(Integer stateGstPercentage) {
 		this.stateGstPercentage = stateGstPercentage;
 	}
 
-	public int getCenterGstPercentage() {
+	public Integer getCenterGstPercentage() {
 		return centerGstPercentage;
 	}
 
-	public void setCenterGstPercentage(int centerGstPercentage) {
+	public void setCenterGstPercentage(Integer centerGstPercentage) {
 		this.centerGstPercentage = centerGstPercentage;
 	}
 
@@ -134,5 +111,4 @@ public class CustomerProductDetails {
 		this.productFinalAmount = productFinalAmount;
 	}
 
-	
 }

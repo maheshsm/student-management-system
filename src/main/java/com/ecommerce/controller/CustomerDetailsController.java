@@ -16,56 +16,87 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.dto.customerDetailsDTO;
-import com.ecommerce.exception.ResourceNotFoundException;
 import com.ecommerce.model.CustomerDetails;
 import com.ecommerce.service.CustomerDetailServiceIn;
 
-
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/ecommerce")
 public class CustomerDetailsController {
-	
+
 	@Autowired
 	public CustomerDetailServiceIn customerDetailService;
 
-	
-	//insert 
-	@PostMapping("/register/customer")
-	public ResponseEntity<Integer> registerCustomer(@RequestBody CustomerDetails customerDetails){
+	/**
+	 * This is post method to response for client
+	 * 
+	 * @param customerDetails
+	 * @return
+	 */
+	@PostMapping("customer/register")
+	public ResponseEntity<Integer> registerCustomer(@RequestBody CustomerDetails customerDetails) {
 		return new ResponseEntity<>(customerDetailService.registerCustomer(customerDetails), HttpStatus.CREATED);
 	}
-	
-	//retrieve details by id
-	@GetMapping("/customer/{customerId}")
-	public ResponseEntity<customerDetailsDTO> getRecordCustomerDetails(@PathVariable int customerId){
-			return new ResponseEntity<>(customerDetailService.findByCustomerDetails(customerId), HttpStatus.OK);	
-		
-	}
-	
-	//retrieve all details
-	@GetMapping("/customer")
-	public  ResponseEntity<List<customerDetailsDTO>> getAllCustomerRecord() {
-			return new ResponseEntity<>(customerDetailService.findAllCustomerRecord(), HttpStatus.OK);
-	}
-	
-	
-	//update
-	@PutMapping("/customer")
-	public ResponseEntity<Integer> updateCustomerDetails(@RequestBody CustomerDetails customerDetails){
+
+	/**
+	 * This is get method for sending response to client
+	 * 
+	 * @param customerId
+	 * @return
+	 */
+	@GetMapping("customer/{customerId}")
+	public ResponseEntity<customerDetailsDTO> getRecordCustomerDetails(@PathVariable Long customerId) {
+
+		customerDetailsDTO cusomterDTO = customerDetailService.findByCustomerDetails(customerId);
+
 		try {
-			return new ResponseEntity<>(customerDetailService.updateCustomerDetails(customerDetails), HttpStatus.CREATED);
+			return new ResponseEntity<>(cusomterDTO, HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+
+	}
+
+	/**
+	 * This is get method to send list of all customer to client
+	 * 
+	 * @return
+	 */
+	@GetMapping("/customer/all")
+	public ResponseEntity<List<customerDetailsDTO>> getAllCustomerRecord() {
+		return new ResponseEntity<>(customerDetailService.findAllCustomerRecord(), HttpStatus.OK);
+	}
+
+	/**
+	 * This is put method to response to update data from client
+	 * 
+	 * @param customerDetails
+	 * @param customerId
+	 * @return
+	 */
+	@PutMapping("customer/{customerId}")
+	public ResponseEntity<Integer> updateCustomerDetails(@RequestBody CustomerDetails customerDetails,
+			@PathVariable Long customerId) {
+		try {
+			return new ResponseEntity<>(customerDetailService.updateCustomerDetails(customerDetails, customerId),
+					HttpStatus.CREATED);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ResponseEntity<>(customerDetailService.updateCustomerDetails(customerDetails), HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<>(customerDetailService.updateCustomerDetails(customerDetails, customerId),
+					HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	
-	
-	//delete
-	@DeleteMapping("/customer/{customerId}")
-	public ResponseEntity<?> deleteCustomerDetails(@PathVariable int customerId ) throws SQLException{
-		 customerDetailService.deleteCustomerDetails(customerId);
+
+	/**
+	 * This is delete method to request to delete customer form database
+	 * 
+	 * @param customerId
+	 * @return
+	 * @throws SQLException
+	 */
+	@DeleteMapping("customer/delete/{customerId}")
+	public ResponseEntity<?> deleteCustomerDetails(@PathVariable Long customerId) throws SQLException {
+		customerDetailService.deleteCustomerDetails(customerId);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
-	
+
 }

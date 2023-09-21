@@ -4,34 +4,18 @@ import java.sql.Date;
 
 public class DiscountDetails {
 
-	private int discountId;
+	private Integer discountId;
 	private String name;
-	private double discountPercentage;
-	private int productId;
+	private Double discountPercentage;
+	private Integer productId;
 	private Date discountStartDate;
 	private Date discountEndDate;
 
-	public DiscountDetails() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public DiscountDetails(int discountId, String name, double discountPercentage, int productId,
-			Date discountStartDate, Date discountEndDate) {
-		super();
-		this.discountId = discountId;
-		this.name = name;
-		this.discountPercentage = discountPercentage;
-		this.productId = productId;
-		this.discountStartDate = discountStartDate;
-		this.discountEndDate = discountEndDate;
-	}
-
-	public int getDiscountId() {
+	public Integer getDiscountId() {
 		return discountId;
 	}
 
-	public void setDiscountId(int discountId) {
+	public void setDiscountId(Integer discountId) {
 		this.discountId = discountId;
 	}
 
@@ -51,11 +35,11 @@ public class DiscountDetails {
 		this.discountPercentage = discountPercentage;
 	}
 
-	public int getProductId() {
+	public Integer getProductId() {
 		return productId;
 	}
 
-	public void setProductId(int productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 

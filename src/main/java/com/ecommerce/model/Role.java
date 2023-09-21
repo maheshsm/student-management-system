@@ -1,25 +1,14 @@
 package com.ecommerce.model;
 
 public class Role {
-	private int roleId;
+	private Integer roleId;
 	private String roleName;
 
-	public Role() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Role(int roleId, String roleName) {
-		super();
-		this.roleId = roleId;
-		this.roleName = roleName;
-	}
-
-	public int getRoleId() {
+	public Integer getRoleId() {
 		return roleId;
 	}
 
-	public void setRoleId(int roleId) {
+	public void setRoleId(Integer roleId) {
 		this.roleId = roleId;
 	}
 

@@ -2,40 +2,21 @@ package com.ecommerce.model;
 
 public class EmployeeDetails {
 
-	private int userId;
+	private Integer userId;
 	private String firstName;
 	private String lastName;
 	private String userName;
 	private String password;
-	private long mobile;
+	private Long mobile;
 	private String email;
 	private String address;
-	private int roleId;
+	private Integer roleId;
 
-	public EmployeeDetails() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public EmployeeDetails(int userId, String firstName, String lastName, String userName, String password, long mobile,
-			String email, String address, int roleId) {
-		super();
-		this.userId = userId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.userName = userName;
-		this.password = password;
-		this.mobile = mobile;
-		this.email = email;
-		this.address = address;
-		this.roleId = roleId;
-	}
-
-	public int getUserId() {
+	public Integer getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
 
@@ -95,11 +76,11 @@ public class EmployeeDetails {
 		this.address = address;
 	}
 
-	public int getRoleId() {
+	public Integer getRoleId() {
 		return roleId;
 	}
 
-	public void setRoleId(int roleId) {
+	public void setRoleId(Integer roleId) {
 		this.roleId = roleId;
 	}
 
