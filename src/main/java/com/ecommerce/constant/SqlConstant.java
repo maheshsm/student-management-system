@@ -1,10 +1,10 @@
-package com.ecommerce.repository;
+package com.ecommerce.constant;
 
-public final class SqlConstant {
+public class SqlConstant {
 
-	public static final String INSERT_CUSTOMER = "INSERT INTO customer_details "
-			+ "(firstName, lastName, username, password, mobile, email, address) " 
-			+ "VALUES (?, ?, ?, ?, ?, ?, ?)";
+	public static final String REGISTER_CUSTOMER = "insert into customer_details"
+			+ "(firstName, lastName, username, password, mobile, email,address) " 
+			+ "value(?,?,?,?,?,?,?)";
 
 	public static final String FIND_CUSTOMER_BY_ID = "SELECT * FROM customer_details "
 			+ "WHERE customerId = ?";
@@ -17,4 +17,5 @@ public final class SqlConstant {
 
 	public static final String DELETE_CUSTOMER_BY_ID = "DELETE FROM customer_details "
 			+ "WHERE customerId = ?";
+
 }

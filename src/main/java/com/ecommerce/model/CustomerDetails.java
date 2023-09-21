@@ -84,4 +84,10 @@ public class CustomerDetails {
 		this.billId = billId;
 	}
 
+	@Override
+	public String toString() {
+		return "CustomerDetails [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", username=" + username + ", password=" + password + ", mobile=" + mobile + ", email=" + email
+				+ ", address=" + address + ", billId=" + billId + "]";
+	}
 }

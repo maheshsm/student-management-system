@@ -13,27 +13,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.ecommerce.dto.customerDetailsDTO;
+import com.ecommerce.dto.CustomerDetailsDTO;
 import com.ecommerce.model.CustomerDetails;
 import com.ecommerce.service.CustomerDetailServiceIn;
 
-@RestController
-@RequestMapping("/ecommerce")
+@RequestMapping("/ecommerce/customer")
 public class CustomerDetailsController {
 
 	@Autowired
 	public CustomerDetailServiceIn customerDetailService;
 
 	/**
-	 * This is post method to response for client
+	 * Register New customer.
 	 * 
 	 * @param customerDetails
-	 * @return
+	 * @return ResponseEntity<Integer>
 	 */
-	@PostMapping("customer/register")
+	@PostMapping("/register")
 	public ResponseEntity<Integer> registerCustomer(@RequestBody CustomerDetails customerDetails) {
+
 		return new ResponseEntity<>(customerDetailService.registerCustomer(customerDetails), HttpStatus.CREATED);
 	}
 
@@ -43,17 +42,17 @@ public class CustomerDetailsController {
 	 * @param customerId
 	 * @return
 	 */
-	@GetMapping("customer/{customerId}")
-	public ResponseEntity<customerDetailsDTO> getRecordCustomerDetails(@PathVariable Long customerId) {
+	@GetMapping("/{customerId}")
 
-		customerDetailsDTO cusomterDTO = customerDetailService.findByCustomerDetails(customerId);
+	public ResponseEntity<CustomerDetailsDTO> getRecordCustomerDetails(@PathVariable Long customerId) {
+		CustomerDetailsDTO cusomterDTO = customerDetailService.findByCustomerDetails(customerId);
+		try
 
-		try {
+		{
 			return new ResponseEntity<>(cusomterDTO, HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
-
 	}
 
 	/**
@@ -61,8 +60,8 @@ public class CustomerDetailsController {
 	 * 
 	 * @return
 	 */
-	@GetMapping("/customer/all")
-	public ResponseEntity<List<customerDetailsDTO>> getAllCustomerRecord() {
+	@GetMapping("/get/all")
+	public ResponseEntity<List<CustomerDetailsDTO>> getAllCustomerRecord() {
 		return new ResponseEntity<>(customerDetailService.findAllCustomerRecord(), HttpStatus.OK);
 	}
 
@@ -73,7 +72,7 @@ public class CustomerDetailsController {
 	 * @param customerId
 	 * @return
 	 */
-	@PutMapping("customer/{customerId}")
+	@PutMapping("/{customerId}")
 	public ResponseEntity<Integer> updateCustomerDetails(@RequestBody CustomerDetails customerDetails,
 			@PathVariable Long customerId) {
 		try {
@@ -93,10 +92,9 @@ public class CustomerDetailsController {
 	 * @return
 	 * @throws SQLException
 	 */
-	@DeleteMapping("customer/delete/{customerId}")
+	@DeleteMapping("/{customerId}")
 	public ResponseEntity<?> deleteCustomerDetails(@PathVariable Long customerId) throws SQLException {
 		customerDetailService.deleteCustomerDetails(customerId);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
-
 }
