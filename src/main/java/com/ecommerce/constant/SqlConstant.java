@@ -2,9 +2,9 @@ package com.ecommerce.constant;
 
 public class SqlConstant {
 
-	public static final String REGISTER_CUSTOMER = "insert into customer_details"
+	public static final String REGISTER_CUSTOMER = "INSERT INTO customer_details"
 			+ "(firstName, lastName, username, password, mobile, email,address) " 
-			+ "value(?,?,?,?,?,?,?)";
+			+ "VALUES(?,?,?,?,?,?,?)";
 
 	public static final String FIND_CUSTOMER_BY_ID = "SELECT * FROM customer_details "
 			+ "WHERE customerId = ?";
