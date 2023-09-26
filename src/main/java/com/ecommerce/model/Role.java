@@ -20,5 +20,10 @@ public class Role {
 		this.roleName = roleName;
 	}
 
-	// Constructors, getters, setters, and other methods as needed
+	@Override
+	public String toString() {
+		return "Role [roleId=" + roleId + ", roleName=" + roleName + "]";
+	}
+
+	
 }

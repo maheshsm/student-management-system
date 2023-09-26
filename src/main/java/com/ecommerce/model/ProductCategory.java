@@ -1,8 +1,8 @@
 package com.ecommerce.model;
 
-public class ProductCategory { // Capitalized class name
+public class ProductCategory { 
 	private Integer categoryId;
-	private String name;
+	private String categoryName;
 
 	public Integer getCategoryId() {
 		return categoryId;
@@ -12,13 +12,26 @@ public class ProductCategory { // Capitalized class name
 		this.categoryId = categoryId;
 	}
 
-	public String getName() {
-		return name;
+	public String getcategoryName() {
+		return categoryName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setcategoryName(String categoryName) {
+		this.categoryName = categoryName;
 	}
 
-	// Constructors, getters, setters, and other methods as needed
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	@Override
+	public String toString() {
+		return "ProductCategory [categoryId=" + categoryId + ", categoryName=" + categoryName + "]";
+	}
+	
+	
 }

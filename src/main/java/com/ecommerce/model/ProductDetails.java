@@ -1,116 +1,171 @@
 package com.ecommerce.model;
 
-import java.sql.Date;
 
 public class ProductDetails {
+    private Integer productId;
+    private Integer categoryId;
+    private Integer discountId;
+    private String name;
+    private Double pricePerQuantity;
+    private Double pricePerKg;
+    private Double pricePerLtr;
+    private Integer totalQuantity;
+    private Integer totalKg;
+    private Integer totalLtr;
+    private Double totalPrice;
+    private String isWarranty;
+    private String warrantyDate;
+    private String isGuarantee;
+    private String guaranteeDate;
+    private Double sgst;
+    private Double cgst;
 
-	private Integer productId;
-	private String name;
-	private Integer categoryId;
-	private double stockInKgs;
-	private double stockInLtrs;
-	private Integer stockInCount;
-	private String description;
-	private String companyName;
-	private Date expiryDate;
-	private Date warrantyDate;
-	private Date guaranteeDate;
-	private double price;
+    // Getter and Setter methods for all fields
 
-	public Integer getProductId() {
-		return productId;
-	}
+    public Integer getProductId() {
+        return productId;
+    }
 
-	public void setProductId(Integer productId) {
-		this.productId = productId;
-	}
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public Integer getCategoryId() {
+        return categoryId;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+    }
 
-	public Integer getCategoryId() {
-		return categoryId;
-	}
+    public Integer getDiscountId() {
+        return discountId;
+    }
 
-	public void setCategoryId(Integer categoryId) {
-		this.categoryId = categoryId;
-	}
+    public void setDiscountId(Integer discountId) {
+        this.discountId = discountId;
+    }
 
-	public double getStockInKgs() {
-		return stockInKgs;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setStockInKgs(double stockInKgs) {
-		this.stockInKgs = stockInKgs;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public double getStockInLtrs() {
-		return stockInLtrs;
-	}
+    public Double getPricePerQuantity() {
+        return pricePerQuantity;
+    }
 
-	public void setStockInLtrs(double stockInLtrs) {
-		this.stockInLtrs = stockInLtrs;
-	}
+    public void setPricePerQuantity(Double pricePerQuantity) {
+        this.pricePerQuantity = pricePerQuantity;
+    }
 
-	public Integer getStockInCount() {
-		return stockInCount;
-	}
+    public Double getPricePerKg() {
+        return pricePerKg;
+    }
 
-	public void setStockInCount(Integer stockInCount) {
-		this.stockInCount = stockInCount;
-	}
+    public void setPricePerKg(Double pricePerKg) {
+        this.pricePerKg = pricePerKg;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public Double getPricePerLtr() {
+        return pricePerLtr;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setPricePerLtr(Double pricePerLtr) {
+        this.pricePerLtr = pricePerLtr;
+    }
 
-	public String getCompanyName() {
-		return companyName;
-	}
+    public Integer getTotalQuantity() {
+        return totalQuantity;
+    }
 
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
-	}
+    public void setTotalQuantity(Integer totalQuantity) {
+        this.totalQuantity = totalQuantity;
+    }
 
-	public Date getExpiryDate() {
-		return expiryDate;
-	}
+    public Integer getTotalKg() {
+        return totalKg;
+    }
 
-	public void setExpiryDate(Date expiryDate) {
-		this.expiryDate = expiryDate;
-	}
+    public void setTotalKg(Integer totalKg) {
+        this.totalKg = totalKg;
+    }
 
-	public Date getWarrantyDate() {
-		return warrantyDate;
-	}
+    public Integer getTotalLtr() {
+        return totalLtr;
+    }
 
-	public void setWarrantyDate(Date warrantyDate) {
-		this.warrantyDate = warrantyDate;
-	}
+    public void setTotalLtr(Integer totalLtr) {
+        this.totalLtr = totalLtr;
+    }
 
-	public Date getGuaranteeDate() {
-		return guaranteeDate;
-	}
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
 
-	public void setGuaranteeDate(Date guaranteeDate) {
-		this.guaranteeDate = guaranteeDate;
-	}
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
 
-	public double getPrice() {
-		return price;
-	}
+    public String getIsWarranty() {
+        return isWarranty;
+    }
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
+    public void setIsWarranty(String isWarranty) {
+        this.isWarranty = isWarranty;
+    }
 
+    public String getWarrantyDate() {
+        return warrantyDate;
+    }
+
+    public void setWarrantyDate(String warrantyDate) {
+        this.warrantyDate = warrantyDate;
+    }
+
+    public String getIsGuarantee() {
+        return isGuarantee;
+    }
+
+    public void setIsGuarantee(String isGuarantee) {
+        this.isGuarantee = isGuarantee;
+    }
+
+    public String getGuaranteeDate() {
+        return guaranteeDate;
+    }
+
+    public void setGuaranteeDate(String guaranteeDate) {
+        this.guaranteeDate = guaranteeDate;
+    }
+
+    public Double getSgst() {
+        return sgst;
+    }
+
+    public void setSgst(Double sgst) {
+        this.sgst = sgst;
+    }
+
+    public Double getCgst() {
+        return cgst;
+    }
+
+    public void setCgst(Double cgst) {
+        this.cgst = cgst;
+    }
+
+    // toString method for debugging
+    @Override
+    public String toString() {
+        return "ProductDetails [productId=" + productId + ", categoryId=" + categoryId + ", discountId=" + discountId
+                + ", name=" + name + ", pricePerQuantity=" + pricePerQuantity + ", pricePerKg=" + pricePerKg
+                + ", pricePerLtr=" + pricePerLtr + ", totalQuantity=" + totalQuantity + ", totalKg=" + totalKg
+                + ", totalLtr=" + totalLtr + ", totalPrice=" + totalPrice + ", isWarranty=" + isWarranty
+                + ", warrantyDate=" + warrantyDate + ", isGuarantee=" + isGuarantee + ", guaranteeDate=" + guaranteeDate
+                + ", sgst=" + sgst + ", cgst=" + cgst + "]";
+    }
 }

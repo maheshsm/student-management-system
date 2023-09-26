@@ -1,114 +1,91 @@
 package com.ecommerce.model;
-
 public class CustomerProductDetails {
+    private Integer id;
+    private Integer uid;
+    private Integer productId;
+    private Double qtyKg;
+    private Double qtyLtr;
+    private Integer qty;
+    private Double totalAmount;
+    private Double discountedAmount;
+    private String billingDate;
 
-	private Integer custProdId;
-	private Integer customerId;
-	private Integer productId;
-	private Integer discountId;
-	private Integer purchaseInKgs;
-	private Integer purchaseInLtrs;
-	private Integer purchaseInCount;
-	private Integer discountedAmount;
-	private Integer productOriginalAmount;
-	private Integer stateGstPercentage;
-	private Integer centerGstPercentage;
-	private Double productFinalAmount;
+    // Getter and Setter methods
+    public Integer getId() {
+        return id;
+    }
 
-	public Integer getCustProdId() {
-		return custProdId;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setCustProdId(Integer custProdId) {
-		this.custProdId = custProdId;
-	}
+    public Integer getUid() {
+        return uid;
+    }
 
-	public Integer getCustomerId() {
-		return customerId;
-	}
+    public void setUid(Integer uid) {
+        this.uid = uid;
+    }
 
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
-	}
+    public Integer getProductId() {
+        return productId;
+    }
 
-	public Integer getProductId() {
-		return productId;
-	}
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
 
-	public void setProductId(Integer productId) {
-		this.productId = productId;
-	}
+    public Double getQtyKg() {
+        return qtyKg;
+    }
 
-	public Integer getDiscountId() {
-		return discountId;
-	}
+    public void setQtyKg(Double qtyKg) {
+        this.qtyKg = qtyKg;
+    }
 
-	public void setDiscountId(Integer discountId) {
-		this.discountId = discountId;
-	}
+    public Double getQtyLtr() {
+        return qtyLtr;
+    }
 
-	public Integer getPurchaseInKgs() {
-		return purchaseInKgs;
-	}
+    public void setQtyLtr(Double qtyLtr) {
+        this.qtyLtr = qtyLtr;
+    }
 
-	public void setPurchaseInKgs(Integer purchaseInKgs) {
-		this.purchaseInKgs = purchaseInKgs;
-	}
+    public Integer getQty() {
+        return qty;
+    }
 
-	public Integer getPurchaseInLtrs() {
-		return purchaseInLtrs;
-	}
+    public void setQty(Integer qty) {
+        this.qty = qty;
+    }
 
-	public void setPurchaseInLtrs(Integer purchaseInLtrs) {
-		this.purchaseInLtrs = purchaseInLtrs;
-	}
+    public Double getTotalAmount() {
+        return totalAmount;
+    }
 
-	public Integer getPurchaseInCount() {
-		return purchaseInCount;
-	}
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
 
-	public void setPurchaseInCount(Integer purchaseInCount) {
-		this.purchaseInCount = purchaseInCount;
-	}
+    public Double getDiscountedAmount() {
+        return discountedAmount;
+    }
 
-	public Integer getDiscountedAmount() {
-		return discountedAmount;
-	}
+    public void setDiscountedAmount(Double discountedAmount) {
+        this.discountedAmount = discountedAmount;
+    }
 
-	public void setDiscountedAmount(Integer discountedAmount) {
-		this.discountedAmount = discountedAmount;
-	}
+    public String getBillingDate() {
+        return billingDate;
+    }
 
-	public Integer getProductOriginalAmount() {
-		return productOriginalAmount;
-	}
+    public void setBillingDate(String billingDate) {
+        this.billingDate = billingDate;
+    }
 
-	public void setProductOriginalAmount(Integer productOriginalAmount) {
-		this.productOriginalAmount = productOriginalAmount;
-	}
-
-	public Integer getStateGstPercentage() {
-		return stateGstPercentage;
-	}
-
-	public void setStateGstPercentage(Integer stateGstPercentage) {
-		this.stateGstPercentage = stateGstPercentage;
-	}
-
-	public Integer getCenterGstPercentage() {
-		return centerGstPercentage;
-	}
-
-	public void setCenterGstPercentage(Integer centerGstPercentage) {
-		this.centerGstPercentage = centerGstPercentage;
-	}
-
-	public double getProductFinalAmount() {
-		return productFinalAmount;
-	}
-
-	public void setProductFinalAmount(double productFinalAmount) {
-		this.productFinalAmount = productFinalAmount;
-	}
-
+    // toString method for debugging
+    @Override
+    public String toString() {
+        return "CustomerProductDetails [id=" + id + ", uid=" + uid + ", productId=" + productId + ", qtyKg=" + qtyKg + ", qtyLtr=" + qtyLtr + ", qty=" + qty + ", totalAmount=" + totalAmount + ", discountedAmount=" + discountedAmount + ", billingDate=" + billingDate + "]";
+    }
 }
