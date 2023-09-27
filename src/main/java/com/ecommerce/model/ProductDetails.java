@@ -1,171 +1,171 @@
 package com.ecommerce.model;
 
+import java.time.LocalDate;
 
 public class ProductDetails {
-    private Integer productId;
-    private Integer categoryId;
-    private Integer discountId;
-    private String name;
-    private Double pricePerQuantity;
-    private Double pricePerKg;
-    private Double pricePerLtr;
-    private Integer totalQuantity;
-    private Integer totalKg;
-    private Integer totalLtr;
-    private Double totalPrice;
-    private String isWarranty;
-    private String warrantyDate;
-    private String isGuarantee;
-    private String guaranteeDate;
-    private Double sgst;
-    private Double cgst;
+	private Integer productId;
+	private Integer categoryId;
+	private Integer discountId;
+	private String name;
+	private Double pricePerQuantity;
+	private Double pricePerKg;
+	private Double pricePerLtr;
+	private Integer totalQuantity;
+	private Integer totalKg;
+	private Integer totalLtr;
+	private Double totalPrice;
+	private Boolean isWarranty;
+	private LocalDate warrantyDate;
+	private Boolean isGuarantee;
+	private LocalDate guaranteeDate;
+	private Double sgst;
+	private Double cgst;
+	
+	// Getter and Setter methods for all fields
+	public Integer getProductId() {
+		return productId;
+	}
 
-    // Getter and Setter methods for all fields
+	public void setProductId(Integer productId) {
+		this.productId = productId;
+	}
 
-    public Integer getProductId() {
-        return productId;
-    }
+	public Integer getCategoryId() {
+		return categoryId;
+	}
 
-    public void setProductId(Integer productId) {
-        this.productId = productId;
-    }
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
+	}
 
-    public Integer getCategoryId() {
-        return categoryId;
-    }
+	public Integer getDiscountId() {
+		return discountId;
+	}
 
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-    }
+	public void setDiscountId(Integer discountId) {
+		this.discountId = discountId;
+	}
 
-    public Integer getDiscountId() {
-        return discountId;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setDiscountId(Integer discountId) {
-        this.discountId = discountId;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Double getPricePerQuantity() {
+		return pricePerQuantity;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setPricePerQuantity(Double pricePerQuantity) {
+		this.pricePerQuantity = pricePerQuantity;
+	}
 
-    public Double getPricePerQuantity() {
-        return pricePerQuantity;
-    }
+	public Double getPricePerKg() {
+		return pricePerKg;
+	}
 
-    public void setPricePerQuantity(Double pricePerQuantity) {
-        this.pricePerQuantity = pricePerQuantity;
-    }
+	public void setPricePerKg(Double pricePerKg) {
+		this.pricePerKg = pricePerKg;
+	}
 
-    public Double getPricePerKg() {
-        return pricePerKg;
-    }
+	public Double getPricePerLtr() {
+		return pricePerLtr;
+	}
 
-    public void setPricePerKg(Double pricePerKg) {
-        this.pricePerKg = pricePerKg;
-    }
+	public void setPricePerLtr(Double pricePerLtr) {
+		this.pricePerLtr = pricePerLtr;
+	}
 
-    public Double getPricePerLtr() {
-        return pricePerLtr;
-    }
+	public Integer getTotalQuantity() {
+		return totalQuantity;
+	}
 
-    public void setPricePerLtr(Double pricePerLtr) {
-        this.pricePerLtr = pricePerLtr;
-    }
+	public void setTotalQuantity(Integer totalQuantity) {
+		this.totalQuantity = totalQuantity;
+	}
 
-    public Integer getTotalQuantity() {
-        return totalQuantity;
-    }
+	public Integer getTotalKg() {
+		return totalKg;
+	}
 
-    public void setTotalQuantity(Integer totalQuantity) {
-        this.totalQuantity = totalQuantity;
-    }
+	public void setTotalKg(Integer totalKg) {
+		this.totalKg = totalKg;
+	}
 
-    public Integer getTotalKg() {
-        return totalKg;
-    }
+	public Integer getTotalLtr() {
+		return totalLtr;
+	}
 
-    public void setTotalKg(Integer totalKg) {
-        this.totalKg = totalKg;
-    }
+	public void setTotalLtr(Integer totalLtr) {
+		this.totalLtr = totalLtr;
+	}
 
-    public Integer getTotalLtr() {
-        return totalLtr;
-    }
+	public Double getTotalPrice() {
+		return totalPrice;
+	}
 
-    public void setTotalLtr(Integer totalLtr) {
-        this.totalLtr = totalLtr;
-    }
+	public void setTotalPrice(Double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
 
-    public Double getTotalPrice() {
-        return totalPrice;
-    }
+	public Boolean getIsWarranty() {
+		return isWarranty;
+	}
 
-    public void setTotalPrice(Double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
+	public void setIsWarranty(Boolean isWarranty) {
+		this.isWarranty = isWarranty;
+	}
 
-    public String getIsWarranty() {
-        return isWarranty;
-    }
+	public LocalDate getWarrantyDate() {
+		return warrantyDate;
+	}
 
-    public void setIsWarranty(String isWarranty) {
-        this.isWarranty = isWarranty;
-    }
+	public void setWarrantyDate(LocalDate warrantyDate) {
+		this.warrantyDate = warrantyDate;
+	}
 
-    public String getWarrantyDate() {
-        return warrantyDate;
-    }
+	public Boolean getIsGuarantee() {
+		return isGuarantee;
+	}
 
-    public void setWarrantyDate(String warrantyDate) {
-        this.warrantyDate = warrantyDate;
-    }
+	public void setIsGuarantee(Boolean isGuarantee) {
+		this.isGuarantee = isGuarantee;
+	}
 
-    public String getIsGuarantee() {
-        return isGuarantee;
-    }
+	public LocalDate getGuaranteeDate() {
+		return guaranteeDate;
+	}
 
-    public void setIsGuarantee(String isGuarantee) {
-        this.isGuarantee = isGuarantee;
-    }
+	public void setGuaranteeDate(LocalDate guaranteeDate) {
+		this.guaranteeDate = guaranteeDate;
+	}
 
-    public String getGuaranteeDate() {
-        return guaranteeDate;
-    }
+	public Double getSgst() {
+		return sgst;
+	}
 
-    public void setGuaranteeDate(String guaranteeDate) {
-        this.guaranteeDate = guaranteeDate;
-    }
+	public void setSgst(Double sgst) {
+		this.sgst = sgst;
+	}
 
-    public Double getSgst() {
-        return sgst;
-    }
+	public Double getCgst() {
+		return cgst;
+	}
 
-    public void setSgst(Double sgst) {
-        this.sgst = sgst;
-    }
+	public void setCgst(Double cgst) {
+		this.cgst = cgst;
+	}
 
-    public Double getCgst() {
-        return cgst;
-    }
-
-    public void setCgst(Double cgst) {
-        this.cgst = cgst;
-    }
-
-    // toString method for debugging
-    @Override
-    public String toString() {
-        return "ProductDetails [productId=" + productId + ", categoryId=" + categoryId + ", discountId=" + discountId
-                + ", name=" + name + ", pricePerQuantity=" + pricePerQuantity + ", pricePerKg=" + pricePerKg
-                + ", pricePerLtr=" + pricePerLtr + ", totalQuantity=" + totalQuantity + ", totalKg=" + totalKg
-                + ", totalLtr=" + totalLtr + ", totalPrice=" + totalPrice + ", isWarranty=" + isWarranty
-                + ", warrantyDate=" + warrantyDate + ", isGuarantee=" + isGuarantee + ", guaranteeDate=" + guaranteeDate
-                + ", sgst=" + sgst + ", cgst=" + cgst + "]";
-    }
+	// toString method for debugging
+	@Override
+	public String toString() {
+		return "ProductDetails [productId=" + productId + ", categoryId=" + categoryId + ", discountId=" + discountId
+				+ ", name=" + name + ", pricePerQuantity=" + pricePerQuantity + ", pricePerKg=" + pricePerKg
+				+ ", pricePerLtr=" + pricePerLtr + ", totalQuantity=" + totalQuantity + ", totalKg=" + totalKg
+				+ ", totalLtr=" + totalLtr + ", totalPrice=" + totalPrice + ", isWarranty=" + isWarranty
+				+ ", warrantyDate=" + warrantyDate + ", isGuarantee=" + isGuarantee + ", guaranteeDate=" + guaranteeDate
+				+ ", sgst=" + sgst + ", cgst=" + cgst + "]";
+	}
 }
