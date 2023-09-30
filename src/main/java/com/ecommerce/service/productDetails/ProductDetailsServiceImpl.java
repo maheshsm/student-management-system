@@ -1,9 +1,12 @@
 package com.ecommerce.service.productDetails;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.model.ProductDetails;
+import com.ecommerce.model.ProductDetailsResponse;
 import com.ecommerce.repository.ProductDetailsRepository;
 import com.ecommerce.repository.categoryDetails.CategoryDetailsRepository;
 import com.ecommerce.repository.discountDetails.DiscountDetailsRepository;
@@ -27,5 +30,11 @@ public class ProductDetailsServiceImpl implements ProductDetailsService {
 		if (categoryDetailsRepository.isCategoryExists(productDetails.getCategoryId())
 				&& discountDetailsRepository.isDiscountExists(productDetails.getDiscountId()))
 			productDetailsRepository.addNewProduct(productDetails);
+	}
+	
+	@Override
+	public ProductDetailsResponse getAllProductDetails() {
+		
+		return productDetailsRepository.getAllProductDetails();
 	}
 }
