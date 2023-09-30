@@ -12,14 +12,6 @@ public class ProductCategory {
 		this.categoryId = categoryId;
 	}
 
-	public String getcategoryName() {
-		return categoryName;
-	}
-
-	public void setcategoryName(String categoryName) {
-		this.categoryName = categoryName;
-	}
-
 	public String getCategoryName() {
 		return categoryName;
 	}

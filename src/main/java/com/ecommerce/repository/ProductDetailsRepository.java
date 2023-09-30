@@ -37,12 +37,13 @@ public class ProductDetailsRepository {
 	 * @return
 	 */
 	public ProductDetailsResponse getAllProductDetails() {
-		
+
 		ProductDetailsResponse productDetailsResponse = new ProductDetailsResponse();
-		
-		List<ProductDetailsRes> response = jdbcTemplate.query(SqlConstant.GET_ALL_PRODUCT_DETAILS, new ProductDetailsResMapper());
+
+		List<ProductDetailsRes> response = jdbcTemplate.query(SqlConstant.GET_ALL_PRODUCT_DETAILS,
+				new ProductDetailsResMapper());
 		productDetailsResponse.setProductDetailsRes(response);
-		
+
 		return productDetailsResponse;
 	}
 }

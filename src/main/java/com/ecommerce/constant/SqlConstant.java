@@ -1,5 +1,7 @@
 package com.ecommerce.constant;
 
+import org.springframework.jdbc.core.PreparedStatementCreator;
+
 public class SqlConstant {
 
 	public static final String REGISTER_CUSTOMER = "INSERT INTO customer_details"
@@ -34,5 +36,17 @@ public class SqlConstant {
 			+ "on pd.discount_id = dd.discount_id "
 			+ "left join dmart.product_category pc "
 			+ "on pc.category_id = pd.category_id ";
+	
+	public static final String ADD_NEW_PRODUCTCATEGORY = "INSERT INTO dmart.product_category "
+			+"(category_id,category_name) VALUES (?,?)";
+	
+	public static final String GET_ALL_PRODUCT_CATEGORIES ="select * from dmart.product_category";
+	
+	public static final String FIND_PRODUCT_CATEGORY_BY_ID = "select * from dmart.product_category WHERE category_id=?";
 
+	public static final String DELETE_PRODUCT_CATEGORY_BY_ID = "DELETE FROM dmart.product_category "
+			+"WHERE category_id= ?";
+
+	public static final String UPDATE_PRODUCT_CATEGORY_BY_ID = "UPDATE dmart.product_category SET "
+			+"category_name =? WHERE category_id= ?";
 }
