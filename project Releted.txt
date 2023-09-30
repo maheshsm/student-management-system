@@ -1,0 +1,104 @@
+- Role
+roleId    
+roleName
+
+- employee_details
+userId,
+firstName
+lastName
+userName
+password
+mobile
+email
+address
+roleId
+
+- customer_details
+
+customerId,
+firstName
+lastName
+username
+password
+mobile
+email
+address
+billId
+
+- paidCategory
+paidCategoryId
+name
+
+- bill_details
+billId
+customerId
+billDate
+totalAmount
+
+- customer_product_details
+cust_prod_id
+customerId
+productId
+discountId
+purchaseInKgs
+urchaseInLtrs
+purchaseInCount
+discountedAmount
+productOriginalAmount
+stateGstpercentage
+centerGstpercentage
+productFinalAmount
+
+- discount_details
+discountId
+name
+discountPercentage
+productId
+discountStartDate
+discountEndDate
+
+- product_details
+productId
+name
+categoryId
+stockInKgs
+stockInLtrs
+stockInCount
+description
+companyName
+expiryDate
+warrentyDate
+guarrentyDate
+price
+
+- productCategory
+categoryId
+name
+
+Products Operation
+
+1. Add new products into inventory
+2. Delete products from inventoy
+3. Update
+4. Get All available products
+5. Get All products by applied filter
+
+Customer_Products Operation
+
+1. purchase - Add purchased product to customer_products table
+2. return - update purchased product 
+
+Bills 
+
+1. Generate bill for purchased products
+2. Generate bill for purchased products if discounts applied
+Discounts
+1. apply discounts on products
+2. calculate price and update in DB
+
+
+
+CREATE TABLE `ecommerce`.`role` (
+  `roleId` INT GENERATED AUTO INCREMENT,
+  `roleName` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`roleId`));
