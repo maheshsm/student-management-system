@@ -61,13 +61,13 @@ public class ProductCategoryRepository {
 		jdbcTemplate.update(SqlConstant.DELETE_PRODUCT_CATEGORY_BY_ID, categoryId);
 	}
 
-/**
- * This method is for updating Product Category By Id
- * 
- * @param productCategory
- * @param categoryId
- * @return Integer
- */
+	/**
+	 * This method is for updating Product Category By Id
+	 * 
+	 * @param productCategory
+	 * @param categoryId
+	 * @return Integer
+	 */
 	public Integer updateProductCategory(ProductCategory productCategory, Integer categoryId) {
 		return jdbcTemplate.update(SqlConstant.UPDATE_PRODUCT_CATEGORY_BY_ID, productCategory.getCategoryName(),
 				productCategory.getCategoryId());
