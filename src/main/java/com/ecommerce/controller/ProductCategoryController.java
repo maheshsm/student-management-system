@@ -1,7 +1,6 @@
 package com.ecommerce.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.mongo.ReactiveStreamsMongoClientDependsOnBeanFactoryPostProcessor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.model.ProductCategory;
@@ -32,7 +30,7 @@ public class ProductCategoryController {
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 
-	@GetMapping("/getall")
+	@GetMapping("/get/all")
 	public ResponseEntity<?> getAllProductCategories() {
 
 		return new ResponseEntity<>(productCategoryService.findAllProductCategories(), HttpStatus.OK);
@@ -50,7 +48,7 @@ public class ProductCategoryController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
-	@PutMapping("/edit/{categoryId}")
+	@PutMapping("/update/{categoryId}")
 	public ResponseEntity<?> updateProductCategory(@PathVariable Integer categoryId,
 			@RequestBody ProductCategory productCategory) {
 		return new ResponseEntity<>(productCategoryService.updateProductCategory(productCategory, categoryId),

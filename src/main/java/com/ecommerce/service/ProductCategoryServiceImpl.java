@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.ecommerce.model.ProductCategory;
 import com.ecommerce.repository.ProductCategoryRepository;
-
+/**
+ * This is Implementation class for ProductCategory Service.
+ */
 @Service
 public class ProductCategoryServiceImpl implements ProductCategoryService {
 
