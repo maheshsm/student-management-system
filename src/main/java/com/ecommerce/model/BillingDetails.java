@@ -1,11 +1,13 @@
 package com.ecommerce.model;
 
+import java.util.Date;
+
 public class BillingDetails {
     private Integer billingId;
     private Integer customerId;
     private Double billingAmount;
     private Integer paymentId;
-    private String billingDate;
+    private Date billingDate;
 
     // Getter and Setter methods
     public Integer getBillingId() {
@@ -40,11 +42,11 @@ public class BillingDetails {
         this.paymentId = paymentId;
     }
 
-    public String getBillingDate() {
+    public Date getBillingDate() {
         return billingDate;
     }
 
-    public void setBillingDate(String billingDate) {
+    public void setBillingDate(Date billingDate) {
         this.billingDate = billingDate;
     }
 

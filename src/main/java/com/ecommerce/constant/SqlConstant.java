@@ -36,4 +36,19 @@ public class SqlConstant {
 	
 	public static final String DELETE_DISCOUNT_BY_ID = "DELETE FROM discount_details WHERE discount_id = :discount_id";
 
+	public static final String INSERT_BILLINGDETAILS = "INSERT INTO billing_details"
+			+ "(billing_id,customer_id,billing_amount,payment_id,billing_date) " + "VALUES(?,?,?,?,?)";
+	
+	public static final String FIND_BILLING_DETAILS_BY_ID = "SELECT * FROM billing_details " + "WHERE billingid = ?";
+	
+	public static final String GET_ALL_BILLING_DETAILS = "SELECT * FROM billing_details";
+	
+	public static final String UPDATE_PRODUCT_BY_ID = "UPDATE product_details SET "
+			+ "category_id = ?, discount_id = ?, name = ?, price_per_quantity = ?, price_per_kg = ?,"
+			+ " price_per_ltr = ?, total_quantity = ?, total_kg =?, total_ltr =? "
+			+ " total_price = ?, is_warrenty=?, warrenty_date=?, is_guarrenty=?, guarrenty_date=?"
+			+ "s_gst =?, c_gst=?" + "WHERE  product_id= ?";
+	
+	public static final String DELETE_PRODUCT_BY_ID = "DELETE FROM product_details " + "WHERE productId = ?";
+	
 }

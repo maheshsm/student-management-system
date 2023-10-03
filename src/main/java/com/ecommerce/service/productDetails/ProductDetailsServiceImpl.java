@@ -37,4 +37,15 @@ public class ProductDetailsServiceImpl implements ProductDetailsService {
 		
 		return productDetailsRepository.getAllProductDetails();
 	}
+
+	@Override
+	public Integer updateProductsDetails(ProductDetails productDetails, Long customerId) {
+		
+		return productDetailsRepository.updateProduct(productDetails, customerId);
+	}
+	
+	@Override
+	public void deleteById(long productId) {
+		productDetailsRepository.deleteProductById(productId);
+		}
 }

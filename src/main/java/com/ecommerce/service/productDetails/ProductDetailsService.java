@@ -10,4 +10,8 @@ public interface ProductDetailsService {
 	public void addNewProduct(ProductDetails productDetails);
 	
 	public ProductDetailsResponse getAllProductDetails();
+
+	public Integer updateProductsDetails(ProductDetails productDetails, Long productId);
+
+	public void deleteById(long productId);
 }
