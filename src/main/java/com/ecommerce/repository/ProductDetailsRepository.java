@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.ecommerce.constant.SqlConstant;
+import com.ecommerce.mappers.ProductDetailsMapper;
 import com.ecommerce.mappers.ProductDetailsResMapper;
 import com.ecommerce.model.ProductDetails;
 import com.ecommerce.model.ProductDetailsRes;
@@ -37,12 +38,21 @@ public class ProductDetailsRepository {
 	 * @return
 	 */
 	public ProductDetailsResponse getAllProductDetails() {
-		
+
 		ProductDetailsResponse productDetailsResponse = new ProductDetailsResponse();
-		
-		List<ProductDetailsRes> response = jdbcTemplate.query(SqlConstant.GET_ALL_PRODUCT_DETAILS, new ProductDetailsResMapper());
+
+		List<ProductDetailsRes> response = jdbcTemplate.query(SqlConstant.GET_ALL_PRODUCT_DETAILS,
+				new ProductDetailsResMapper());
 		productDetailsResponse.setProductDetailsRes(response);
-		
+
 		return productDetailsResponse;
+	}
+
+	public ProductDetailsRes getProductDetails(Integer productId) {
+
+		ProductDetailsRes response = jdbcTemplate.queryForObject(SqlConstant.GET_PRODUCT_DETAILS_BY_PRODUCTID,
+				new ProductDetailsMapper(), productId);
+
+		return response;
 	}
 }
