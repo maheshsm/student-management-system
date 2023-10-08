@@ -2,7 +2,6 @@ package com.ecommerce.exception;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +35,6 @@ public class GlobalExceptionController {
 
 		return new ResponseEntity<ErrorDetails>(details, HttpStatus.NOT_FOUND);
 	}
-	
 
 	@ExceptionHandler(value = SQLIntegrityConstraintViolationException.class)
 	public ResponseEntity<ErrorDetails> handleSQLIntegrityConstraintViolationException(
@@ -52,7 +50,7 @@ public class GlobalExceptionController {
 	@ExceptionHandler(value = HttpRequestMethodNotSupportedException.class)
 	public ResponseEntity<ErrorDetails> handleHttpRequestMethodNotSupportedException(
 			HttpRequestMethodNotSupportedException exception) {
-		
+
 		ErrorDetails details = new ErrorDetails();
 		details.setErrorDescription(exception.getLocalizedMessage());
 		details.setFieldName(null);
@@ -60,6 +58,5 @@ public class GlobalExceptionController {
 
 		return new ResponseEntity<ErrorDetails>(details, HttpStatus.BAD_REQUEST);
 	}
-	
-	
+
 }
