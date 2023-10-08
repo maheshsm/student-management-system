@@ -1,11 +1,10 @@
 package com.ecommerce.service.productDetails;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.model.ProductDetails;
+import com.ecommerce.model.ProductDetailsRes;
 import com.ecommerce.model.ProductDetailsResponse;
 import com.ecommerce.repository.ProductDetailsRepository;
 import com.ecommerce.repository.categoryDetails.CategoryDetailsRepository;
@@ -36,5 +35,11 @@ public class ProductDetailsServiceImpl implements ProductDetailsService {
 	public ProductDetailsResponse getAllProductDetails() {
 		
 		return productDetailsRepository.getAllProductDetails();
+	}
+
+	@Override
+	public ProductDetailsRes getProductDetails(Integer productId) {
+		
+		return productDetailsRepository.getProductDetails(productId);
 	}
 }

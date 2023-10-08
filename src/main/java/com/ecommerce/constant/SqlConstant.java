@@ -27,6 +27,15 @@ public class SqlConstant {
 			+ "dd.discount_value as discountValue FROM dmart.product_details pd "
 			+ "left join dmart.discount_details dd " + "on pd.discount_id = dd.discount_id "
 			+ "left join dmart.product_category pc " + "on pc.category_id = pd.category_id ";
+	
+	public static final String GET_PRODUCT_DETAILS_BY_PRODUCTID = "SELECT pd.product_id as productid, pd.name as name, pd.price_per_kg as pricePerKg, pd.price_per_ltr as pricePerLtr, "
+			+ "pd.price_per_quantity as pricePerQuantity, pd.c_gst as cgst, pd.s_gst as sgst, pd.is_guarrenty as isGuarantee, pd.guarrenty_date as guaranteeDate, "
+			+ "pd.is_warrenty as isWarranty, pd.warrenty_date as warrantyDate, pd.total_kg as totalKg, pd.total_ltr as totalLtr, pd.total_price as totalPrice, "
+			+ "pd.total_quantity as totalQuantity, pc.category_name as categoryName, dd.discount_name as discountName, dd.discount_type as discountType,"
+			+ "dd.discount_value as discountValue FROM dmart.product_details pd "
+			+ "left join dmart.discount_details dd " + "on pd.discount_id = dd.discount_id "
+			+ "left join dmart.product_category pc " + "on pc.category_id = pd.category_id "
+			+ "where pd.product_id = ?";
 
 	public static final String SELECT_ALL_DISCOUNTS = "SELECT * FROM discount_details";
 	
