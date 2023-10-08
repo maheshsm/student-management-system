@@ -23,7 +23,7 @@ public class CustomerDetailsMapper implements RowMapper<CustomerDetails> {
 		customerDetails.setEmail(rs.getString("email"));
 		customerDetails.setAddress(rs.getString("address"));
 		customerDetails.setBillId(rs.getInt("billId"));
-		return null;
+		return customerDetails;
 	}
 
 }

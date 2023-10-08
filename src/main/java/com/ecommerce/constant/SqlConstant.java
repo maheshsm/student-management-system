@@ -44,5 +44,19 @@ public class SqlConstant {
 	public static final String INSERT_DISCOUNT = "INSERT INTO discount_details (discount_id, discount_name, discount_type, discount_value) VALUES (?, ?, ?, ?)";
 	
 	public static final String DELETE_DISCOUNT_BY_ID = "DELETE FROM discount_details WHERE discount_id = :discount_id";
+	
 
+	public static final String DELETE_PRODUCT_CATEGORY_BY_ID = "DELETE FROM product_category "
+			+"WHERE category_id= ?";
+
+	public static final String UPDATE_PRODUCT_CATEGORY_BY_ID = "UPDATE product_category SET "
+			+"category_name =? WHERE category_id= ?";
+	
+	public static final String ADD_NEW_PRODUCTCATEGORY = "INSERT INTO product_category "
+			+"(category_id,category_name) VALUES (?,?)";
+	
+	public static final String GET_ALL_PRODUCT_CATEGORIES ="select * from product_category";
+	
+	public static final String FIND_PRODUCT_CATEGORY_BY_ID = "select * from product_category WHERE category_id=?";
+	
 }
