@@ -9,6 +9,7 @@ import com.ecommerce.model.ProductDetailsResponse;
 import com.ecommerce.repository.ProductDetailsRepository;
 import com.ecommerce.repository.categoryDetails.CategoryDetailsRepository;
 import com.ecommerce.repository.discountDetails.DiscountDetailsRepository;
+import com.ecommerce.utils.ValidationUtils;
 
 @Service
 public class ProductDetailsServiceImpl implements ProductDetailsService {
@@ -22,9 +23,14 @@ public class ProductDetailsServiceImpl implements ProductDetailsService {
 	@Autowired
 	DiscountDetailsRepository discountDetailsRepository;
 
+	@Autowired
+	ValidationUtils validationUtils;
+	
 	@Override
 	public void addNewProduct(ProductDetails productDetails) {
 
+		validationUtils.checkNameNotExists(productDetails.getName());
+		
 		// 1. validate category and discount exists or not.
 		if (categoryDetailsRepository.isCategoryExists(productDetails.getCategoryId())
 				&& discountDetailsRepository.isDiscountExists(productDetails.getDiscountId()))
