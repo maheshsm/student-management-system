@@ -58,13 +58,12 @@ public class ProductDetailsRepository {
 		return response;
 	}
 
-	public List<Map<String, Object>> checkNameNotExists(String name) {
+	public List<Integer> checkNameNotExists(String name) {
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
-	    params.addValue("name", name);
+	    params.addValue("name", name.toUpperCase());
 	    
-		List<Map<String, Object>> response = jdbcTemplate.queryForList(SqlConstant.CHECK_PRODUCT_DUPLICATION, params,
-				new ProductDetailsResMapper());
+		List<Integer> response = jdbcTemplate.queryForList(SqlConstant.CHECK_PRODUCT_DUPLICATION, Integer.class, new Object[] {name});
 		
 		return response;
 	}

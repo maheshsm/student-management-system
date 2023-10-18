@@ -1,0 +1,128 @@
+2023-10-17 11:34:02,829 INFO [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:55] Starting EcommerceMgmtApplication using Java 1.8.0_202 on DESKTOP-NIOPNP3 with PID 5100 (E:\student-management-system\target\classes started by Admin in E:\student-management-system)
+2023-10-17 11:34:02,834 INFO [restartedMain] c.e.EcommerceMgmtApplication [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-10-17 11:34:02,909 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-17 11:34:02,909 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-17 11:34:03,716 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-17 11:34:03,738 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2023-10-17 11:34:04,538 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8099 (http)
+2023-10-17 11:34:04,549 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:34:04,551 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-10-17 11:34:04,551 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-10-17 11:34:04,640 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-10-17 11:34:04,640 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 1722 ms
+2023-10-17 11:34:04,783 INFO [restartedMain] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-10-17 11:34:05,592 INFO [restartedMain] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-10-17 11:34:06,455 INFO [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17 11:34:06,628 WARN [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:223] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-17 11:34:07,074 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-10-17 11:34:07,107 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:34:07,147 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8099 (http) with context path ''
+2023-10-17 11:34:07,166 INFO [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:61] Started EcommerceMgmtApplication in 4.744 seconds (JVM running for 6.405)
+2023-10-17 11:34:31,522 INFO [http-nio-8099-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-17 11:34:31,524 INFO [http-nio-8099-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2023-10-17 11:34:31,527 INFO [http-nio-8099-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
+2023-10-17 11:36:01,967 INFO [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:211] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-17 11:36:02,308 INFO [Thread-7] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:36:02,309 INFO [Thread-7] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-10-17 11:36:02,311 INFO [Thread-7] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-17 11:36:02,315 INFO [Thread-7] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:36:02,321 INFO [Thread-7] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:36:02,326 INFO [Thread-7] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17 11:36:02,330 INFO [Thread-7] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-10-17 11:36:02,336 INFO [Thread-7] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2023-10-17 11:36:02,564 INFO [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:55] Starting EcommerceMgmtApplication using Java 1.8.0_202 on DESKTOP-NIOPNP3 with PID 5100 (E:\student-management-system\target\classes started by Admin in E:\student-management-system)
+2023-10-17 11:36:02,565 INFO [restartedMain] c.e.EcommerceMgmtApplication [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-10-17 11:36:02,769 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-17 11:36:02,775 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2023-10-17 11:36:02,902 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8099 (http)
+2023-10-17 11:36:02,903 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:36:02,904 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-10-17 11:36:02,904 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-10-17 11:36:02,914 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-10-17 11:36:02,915 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 348 ms
+2023-10-17 11:36:02,951 INFO [restartedMain] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-2 - Starting...
+2023-10-17 11:36:02,976 INFO [restartedMain] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
+2023-10-17 11:36:02,989 INFO [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17 11:36:03,052 WARN [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:223] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-17 11:36:03,199 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-10-17 11:36:03,212 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:36:03,217 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8099 (http) with context path ''
+2023-10-17 11:36:03,228 INFO [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:61] Started EcommerceMgmtApplication in 0.705 seconds (JVM running for 122.467)
+2023-10-17 11:36:03,240 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2023-10-17 11:36:23,289 INFO [http-nio-8099-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-17 11:36:23,291 INFO [http-nio-8099-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2023-10-17 11:36:23,293 INFO [http-nio-8099-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
+2023-10-17 11:37:54,365 INFO [RMI TCP Connection(13)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [SpringApplicationAdminMXBeanRegistrar.java:159] Application shutdown requested.
+2023-10-17 11:37:54,883 INFO [RMI TCP Connection(13)-127.0.0.1] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:37:54,883 INFO [RMI TCP Connection(13)-127.0.0.1] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-10-17 11:37:54,885 INFO [RMI TCP Connection(13)-127.0.0.1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-17 11:37:54,890 INFO [RMI TCP Connection(13)-127.0.0.1] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:37:54,898 INFO [RMI TCP Connection(13)-127.0.0.1] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:37:54,901 INFO [RMI TCP Connection(13)-127.0.0.1] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17 11:37:54,903 INFO [RMI TCP Connection(13)-127.0.0.1] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-2 - Shutdown initiated...
+2023-10-17 11:37:54,915 INFO [RMI TCP Connection(13)-127.0.0.1] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-2 - Shutdown completed.
+2023-10-17 11:45:37,209 INFO [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:55] Starting EcommerceMgmtApplication using Java 1.8.0_202 on DESKTOP-NIOPNP3 with PID 17996 (E:\student-management-system\target\classes started by Admin in E:\student-management-system)
+2023-10-17 11:45:37,217 INFO [restartedMain] c.e.EcommerceMgmtApplication [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-10-17 11:45:37,367 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-17 11:45:37,368 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-17 11:45:38,550 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-17 11:45:38,576 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-10-17 11:45:39,636 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8099 (http)
+2023-10-17 11:45:39,646 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:45:39,648 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-10-17 11:45:39,649 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-10-17 11:45:39,751 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-10-17 11:45:39,753 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 2384 ms
+2023-10-17 11:45:39,929 INFO [restartedMain] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2023-10-17 11:45:40,859 INFO [restartedMain] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2023-10-17 11:45:41,730 INFO [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17 11:45:41,919 WARN [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:223] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-17 11:45:42,455 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-10-17 11:45:42,475 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:45:42,498 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8099 (http) with context path ''
+2023-10-17 11:45:42,515 INFO [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:61] Started EcommerceMgmtApplication in 6.954 seconds (JVM running for 8.539)
+2023-10-17 11:46:02,496 INFO [http-nio-8099-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-17 11:46:02,497 INFO [http-nio-8099-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2023-10-17 11:46:02,500 INFO [http-nio-8099-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 3 ms
+2023-10-17 11:46:46,540 WARN [http-nio-8099-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:208] Resolved [DuplicateNameException [field=name, message=Name is duplicate, value=VIVO v20]]
+2023-10-17 11:50:12,315 INFO [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:211] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-17 11:50:13,656 INFO [Thread-7] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:50:13,657 INFO [Thread-7] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-10-17 11:50:13,660 INFO [Thread-7] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-17 11:50:13,667 INFO [Thread-7] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:50:13,672 INFO [Thread-7] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:50:13,680 INFO [Thread-7] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17 11:50:13,689 INFO [Thread-7] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2023-10-17 11:50:13,699 INFO [Thread-7] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2023-10-17 11:50:13,893 INFO [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:55] Starting EcommerceMgmtApplication using Java 1.8.0_202 on DESKTOP-NIOPNP3 with PID 17996 (E:\student-management-system\target\classes started by Admin in E:\student-management-system)
+2023-10-17 11:50:13,896 DEBUG [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:56] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-10-17 11:50:13,896 INFO [restartedMain] c.e.EcommerceMgmtApplication [SpringApplication.java:631] No active profile set, falling back to 1 default profile: "default"
+2023-10-17 11:50:14,083 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-17 11:50:14,090 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-10-17 11:50:14,232 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8099 (http)
+2023-10-17 11:50:14,234 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:50:14,236 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-10-17 11:50:14,237 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-10-17 11:50:14,258 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-10-17 11:50:14,259 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 358 ms
+2023-10-17 11:50:14,299 INFO [restartedMain] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-2 - Starting...
+2023-10-17 11:50:14,322 INFO [restartedMain] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
+2023-10-17 11:50:14,347 INFO [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17 11:50:14,417 WARN [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:223] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-17 11:50:14,573 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-10-17 11:50:14,590 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:50:14,598 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8099 (http) with context path ''
+2023-10-17 11:50:14,607 INFO [restartedMain] c.e.EcommerceMgmtApplication [StartupInfoLogger.java:61] Started EcommerceMgmtApplication in 0.751 seconds (JVM running for 280.631)
+2023-10-17 11:50:14,620 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2023-10-17 11:50:22,314 INFO [http-nio-8099-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-17 11:50:22,315 INFO [http-nio-8099-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2023-10-17 11:50:22,317 INFO [http-nio-8099-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
+2023-10-17 11:52:35,375 INFO [RMI TCP Connection(11)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [SpringApplicationAdminMXBeanRegistrar.java:159] Application shutdown requested.
+2023-10-17 11:52:35,874 INFO [RMI TCP Connection(11)-127.0.0.1] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:52:35,875 INFO [RMI TCP Connection(11)-127.0.0.1] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-10-17 11:52:35,878 INFO [RMI TCP Connection(11)-127.0.0.1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-17 11:52:35,884 INFO [RMI TCP Connection(11)-127.0.0.1] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:52:35,890 INFO [RMI TCP Connection(11)-127.0.0.1] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8099"]
+2023-10-17 11:52:35,897 INFO [RMI TCP Connection(11)-127.0.0.1] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17 11:52:35,899 INFO [RMI TCP Connection(11)-127.0.0.1] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-2 - Shutdown initiated...
+2023-10-17 11:52:35,918 INFO [RMI TCP Connection(11)-127.0.0.1] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-2 - Shutdown completed.

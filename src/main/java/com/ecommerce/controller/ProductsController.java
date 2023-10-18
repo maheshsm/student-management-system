@@ -5,6 +5,8 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -36,9 +38,16 @@ public class ProductsController {
 	@Autowired
 	RestTemplate restTemplate;
 	
+	private static final Logger logger = LoggerFactory.getLogger(ProductsController.class);
+	
 	@PostMapping
 	public ResponseEntity<?> addNewProduct(@RequestBody ProductDetails productDetails) {
 		
+		logger.warn("In Create Method [{}]. . .", productDetails);
+		logger.info("In Create Method [{}]. . .", productDetails);
+		logger.error("In Create Method [{}]. . .", productDetails);
+		logger.debug("In Create Method [{}]. . .", productDetails);
+		logger.trace("In Create Method [{}]. . .", productDetails);
 		productDetailsService.addNewProduct(productDetails);
 		
 		return new ResponseEntity<>(HttpStatus.CREATED);

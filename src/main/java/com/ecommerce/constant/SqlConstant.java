@@ -39,10 +39,7 @@ public class SqlConstant {
 
 	public static final String SELECT_ALL_DISCOUNTS = "SELECT * FROM discount_details";
 	
-	public static final String CHECK_PRODUCT_DUPLICATION = "SELECT pd.product_id as productid, pd.name as name, pd.price_per_kg as pricePerKg, pd.price_per_ltr as pricePerLtr, "
-			+ "pd.price_per_quantity as pricePerQuantity, pd.c_gst as cgst, pd.s_gst as sgst, pd.is_guarrenty as isGuarantee, pd.guarrenty_date as guaranteeDate, "
-			+ "pd.is_warrenty as isWarranty, pd.warrenty_date as warrantyDate, pd.total_kg as totalKg, pd.total_ltr as totalLtr, pd.total_price as totalPrice, "
-			+ "pd.total_quantity as totalQuantity from product_details pd WHERE pd.name = :name";
+	public static final String CHECK_PRODUCT_DUPLICATION = "SELECT COUNT(*) from product_details pd WHERE upper(pd.name) = ?";
 	
 	public static final String SELECT_DISCOUNT_BY_ID = "SELECT * FROM discount_details WHERE discount_id = ?";
 	
